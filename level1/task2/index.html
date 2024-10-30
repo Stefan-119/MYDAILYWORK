@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Landing Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .selector-for-some-widget {
+        box-sizing: content-box;
+      }
+
+      .header {
+        opacity: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: fixed;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .header.scrolled {
+        background-color: white;
+        opacity: 0.98;
+      }
+
+      .main {
+        min-height: 100vh;
+        background-image: url(./assets/bg-study.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+      }
+      .background-tint {
+        background-color: rgba(53, 26, 0, 0.7);
+        background-blend-mode: multiply;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="z-3 header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="fs-3 navbar-brand" href="#">LandingPage</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarNavAltMarkup"
+            >
+              <div
+                class="navbar-nav main-links nav-fill ms-5"
+                style="width: 60%"
+              >
+                <a class="nav-link" href="#main-header">Home</a>
+                <a class="nav-link" href="#main-content">Features</a>
+                <a class="nav-link" href="#about">About us</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+                <a class="nav-link" href="#contact">Contact</a>
+              </div>
+              <a class="text-center me-5 nav-link" href="#"
+                >Say hello - info@soft.co</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <section id="main-header" class="main background-tint pt-3 mb-5">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="fs-3 text-white navbar-brand" href="#">LandingPage</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarNavAltMarkup"
+            >
+              <div
+                class="navbar-nav main-links nav-fill ms-5"
+                style="width: 60%"
+              >
+                <a class="text-white nav-link" href="#main-header">Home</a>
+                <a class="text-white nav-link" href="#main-content">Features</a>
+                <a class="text-white nav-link" href="#about">About us</a>
+                <a class="text-white nav-link" href="#pricing">Pricing</a>
+                <a class="text-white nav-link" href="#contact">Contact</a>
+              </div>
+              <a class="text-white text-center me-5 nav-link" href="#"
+                >Say hello - info@soft.co</a
+              >
+            </div>
+          </div>
+        </nav>
+
+        <div
+          class="main-header text-white text-center position-absolute top-50 start-50 translate-middle"
+        >
+          <h1>Welcome to My Website</h1>
+          <p>Your go-to platform for all things digital!</p>
+          <form action="" method="get" class="online-form">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your email"
+                aria-label="Enter your email"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-success" type="button" id="button-addon2">
+                Get Started
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="main-content" class="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="my-5">
+              <h1>What you get</h1>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+            <ul class="nav nav-tabs mt-3">
+              <li class="nav-item">
+                <button class="tab nav-link bg-black text-white active">
+                  Responsive
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="tab text-black-50 nav-link">Mobile</button>
+              </li>
+              <li class="nav-item">
+                <button class="tab text-black-50 nav-link">Support</button>
+              </li>
+            </ul>
+
+            <div class="tab-content my-5">
+              <div class="tab-pane active" id="tab01" role="tabpanel">
+                <div class="tab-pane-item">
+                  <h2>Minimal Design</h2>
+                  <p>
+                    Nam feugiat a ante sollicitudin luctus. Quisque eget
+                    placerat massa. Ut quis ligula ornare, pellentesque velit
+                    eget, vestibulum est. Donec pretium tristique elit eget
+                    sodales. Pellentesque posuere.
+                  </p>
+                </div>
+                <div class="tab-pane-item">
+                  <h2>Easy to use</h2>
+                  <p>
+                    Aliquam massa massa, consectetur non mattis fringilla,
+                    sodales ac turpis. Morbi ac felis sagittis, faucibus mauris
+                    vitae, placerat mauris.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab02" role="tabpanel">
+                <div class="tab-pane-item">
+                  <h2>Compatible Browsers</h2>
+                  <p>
+                    Nam maximus elit a metus luctus, a faucibus magna mattis. Ut
+                    malesuada viverra iaculis. Nunc euismod sit amet neque a
+                    tincidunt.
+                  </p>
+                </div>
+                <div class="tab-pane-item">
+                  <h2>User Friendly</h2>
+                  <p>
+                    Maecenas maximus velit lorem, quis pharetra turpis fringilla
+                    id. Vestibulum tempor facilisis efficitur. Sed nec nisi sit
+                    amet nibh pellentesque elementum.
+                  </p>
+                </div>
+                <div class="tab-pane-item">
+                  <h2>HTML5 & CSS3</h2>
+                  <p>
+                    In viverra ipsum ornare sapien rhoncus ullamcorper. Vivamus
+                    vitae risus ac mi vehicula sagittis. Nulla dictum magna sit
+                    amet pharetra aliquam.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab03" role="tabpanel">
+                <div class="tab-pane-item">
+                  <h2>Quick Support</h2>
+                  <p>
+                    Mauris rutrum est at fringilla pulvinar. Nam ligula urna,
+                    lobortis non scelerisque vel, molestie eu massa. Nullam
+                    mattis elit at tortor accumsan.
+                  </p>
+                </div>
+                <div class="tab-pane-item">
+                  <h2>Managed Stuffs</h2>
+                  <p>
+                    Quisque ullamcorper sem quis sapien cursus efficitur. Sed id
+                    sodales ipsum. Morbi eleifend tempus erat sit amet vehicula.
+                    Nulla at posuere tellus, non mattis erat. Nulla id massa
+                    gravida.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+            <div class="feature-image">
+              <img
+                height="425"
+                src="./assets/thin-laptop.png"
+                class="img-responsive"
+                alt="Thin Laptop"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about bg-body-tertiary">
+      <div class="container p-5">
+        <div class="text-center p-5">
+          <div class="section-title">
+            <h1>Professional Team for you</h1>
+          </div>
+        </div>
+
+        <div class="team bg-body-secondary">
+          <div class="row p-5 row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="assets/man-1.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Andrew Ned</h5>
+                  <h6 class="card-title">Senior Manager</h6>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Repudiandae blanditiis temporibus nihil, odio commodi iure
+                    provident?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Robert Wilson</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Deleniti perferendis minima voluptates, fuga ab quibusdam
+                    enim obcaecati earum.
+                  </p>
+                </div>
+                <img src="assets/man-2.png" class="card-img-top" alt="..." />
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="assets/woman-1.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Catherine Soft</h5>
+                  <h6 class="card-title">CEO / Founder</h6>
+                  <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat esse quos illo? Voluptatibus, tempora id.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing bg-body-secondary">
+      <div class="container p-5">
+        <div class="row p-5">
+          <div class="col-md-12 col-sm-12 mb-5">
+            <div class="text-center">
+              <h1>Choose any plan</h1>
+            </div>
+          </div>
+
+          <div class="card-group">
+            <div class="card border-0 bg-light">
+              <div class="border-end">
+                <div class="card-header border-0 bg-light">
+                  <h3>Student</h3>
+                  <hr class="border-secondary border-2" />
+                </div>
+                <ul class="card-body list-group">
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    10 Responsive Design
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    5 Dashboards
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    500 GB Storage
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    2.5 TB Bandwidth
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    12-hour Support
+                  </li>
+                </ul>
+                <div class="card-footer border-0 bg-light">
+                  <hr class="border-secondary border-2" />
+                  <div
+                    class="d-grid gap-2 d-md-flex align-items-between justify-content-md-around"
+                  >
+                    <p class="fs-4">$100/Mo</p>
+                    <div class="button">
+                      <a
+                        href="#"
+                        class="btn btn-success px-4 py-2"
+                        style="border-radius: 50px"
+                        >Register now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 bg-light">
+              <div class="border-end">
+                <div class="card-header border-0 bg-light">
+                  <h3>Business</h3>
+                  <hr class="border-secondary border-2" />
+                </div>
+                <ul class="card-body list-group">
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    20 Responsive Design
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    10 Dashboards
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    1 TB Storage
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    5 TB Bandwidth
+                  </li>
+                  <li
+                    class="list-group-item border-0 bg-transparent text-body-secondary"
+                  >
+                    24-hour Support
+                  </li>
+                </ul>
+                <div class="card-footer border-0 bg-light">
+                  <hr class="border-secondary border-2" />
+                  <div
+                    class="d-grid gap-2 d-md-flex align-items-between justify-content-md-around"
+                  >
+                    <p class="fs-4">$200/Mo</p>
+                    <div class="button">
+                      <a
+                        href="#"
+                        class="btn btn-success px-4 py-2"
+                        style="border-radius: 50px"
+                        >Register now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 bg-light">
+              <div class="card-header border-0 bg-light">
+                <h3>Professional</h3>
+                <hr class="border-secondary border-2" />
+              </div>
+              <ul class="card-body list-group">
+                <li
+                  class="list-group-item border-0 bg-transparent text-body-secondary"
+                >
+                  40 Responsive Design
+                </li>
+                <li
+                  class="list-group-item border-0 bg-transparent text-body-secondary"
+                >
+                  25 Dashboards
+                </li>
+                <li
+                  class="list-group-item border-0 bg-transparent text-body-secondary"
+                >
+                  5 TB Storage
+                </li>
+                <li
+                  class="list-group-item border-0 bg-transparent text-body-secondary"
+                >
+                  10 TB Bandwidth
+                </li>
+                <li
+                  class="list-group-item border-0 bg-transparent text-body-secondary"
+                >
+                  48-hour Support
+                </li>
+              </ul>
+              <div class="card-footer border-0 bg-light">
+                <hr class="border-secondary border-2" />
+                <div
+                  class="d-grid gap-2 d-md-flex align-items-between justify-content-md-around"
+                >
+                  <p class="fs-4">$400/Mo</p>
+                  <div class="button">
+                    <a
+                      href="#"
+                      class="btn btn-success px-4 py-2"
+                      style="border-radius: 50px"
+                      >Register now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container p-5">
+        <div class="row p-5">
+          <div class="text-center mb-5">
+            <h1>Contact Us</h1>
+          </div>
+
+          <form
+            class="row g-2"
+            id="contact-form"
+            role="form"
+            method="post"
+            action=""
+          >
+            <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating mb-3">
+                  <input
+                    type="fullname"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="full name"
+                  />
+                  <label for="floatingInput">Full Name</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                  />
+                  <label for="floatingInput">Email address</label>
+                </div>
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="max-height: 180px"
+                ></textarea>
+                <label for="floatingTextarea2">Leave a comment here</label>
+              </div>
+              <a
+                href="#"
+                class="btn w-25 btn-dark py-3 mt-4"
+                style="border-radius: 50px"
+                >Send Message</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container-fluid text-center bg-secondary">
+        <div class="row d-flex align-items-center justify-content-center">
+          <nav class="col d-flex justify-content-center nav">
+            <a
+              class="nav-link"
+              target="_blank"
+              href="https://www.instagram.com/stefanleonard1_/"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <radialGradient
+                  id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+                  cx="19.38"
+                  cy="42.035"
+                  r="44.899"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#fd5"></stop>
+                  <stop offset=".328" stop-color="#ff543f"></stop>
+                  <stop offset=".348" stop-color="#fc5245"></stop>
+                  <stop offset=".504" stop-color="#e64771"></stop>
+                  <stop offset=".643" stop-color="#d53e91"></stop>
+                  <stop offset=".761" stop-color="#cc39a4"></stop>
+                  <stop offset=".841" stop-color="#c837ab"></stop>
+                </radialGradient>
+                <path
+                  fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                  d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                ></path>
+                <radialGradient
+                  id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+                  cx="11.786"
+                  cy="5.54"
+                  r="29.813"
+                  gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#4168c9"></stop>
+                  <stop
+                    offset=".999"
+                    stop-color="#4168c9"
+                    stop-opacity="0"
+                  ></stop>
+                </radialGradient>
+                <path
+                  fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                  d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+                ></path>
+                <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+                <path
+                  fill="#fff"
+                  d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="nav-link"
+              target="_blank"
+              href="https://www.facebook.com/leostef97"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#039be5"
+                  d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+          <h5 class="col-6 flex-fill">
+            &copy; 2024 Stefan Leonard. All Rights Reserved.
+          </h5>
+          <nav class="col d-flex justify-content-center nav">
+            <a
+              class="nav-link"
+              target="_blank"
+              href="https://github.com/Stefan-119"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 64 64"
+              >
+                <path
+                  d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="nav-link"
+              href="https://www.linkedin.com/in/stefan-leonard-636621263/"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#0288D1"
+                  d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("scroll", () => {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 60) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-pane");
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+          tab.classList.remove("text-white");
+          tab.classList.remove("bg-black");
+          tab.classList.add("text-black-50");
+        });
+        tab.classList.remove("text-black-50");
+        tab.classList.add("active");
+        tab.classList.add("text-white");
+        tab.classList.add("bg-black");
+
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+        tabContents[index].classList.add("active");
+      });
+    });
+  </script>
+</html>
